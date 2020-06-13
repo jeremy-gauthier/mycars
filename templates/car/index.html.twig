@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Car index{% endblock %}
+{% block title %}Mes Voitures{% endblock %}
 
 {% block body %}
-    <h1>Car index</h1>
+    <h1>Mes voitures</h1>
 
     <table class="table">
         <thead>
@@ -23,8 +23,9 @@
                 <td>{{ car.year }}</td>
                 <td>{{ car.brand.name }}</td>
                 <td>
-                    <a href="{{ path('car_show', {'id': car.id}) }}">show</a>
-                    <a href="{{ path('car_edit', {'id': car.id}) }}">edit</a>
+                    <a href="{{ path('car_show', {'id': car.id}) }}">Voir</a>
+                    <br>
+                    <a href="{{ path('car_edit', {'id': car.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -35,5 +36,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('car_new') }}">Create new</a>
+    <a href="{{ path('car_new') }}">Ajouter une voiture</a>
 {% endblock %}
